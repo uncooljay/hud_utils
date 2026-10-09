@@ -61,7 +61,7 @@ createtext( text, font, fontscale, point, x, y, color, sort, alpha )
     element.hidewheninmenu = true;
     element.hidewheninscope = true;
 
-    element settext( text );
+    element settextunlimited( text );
     element setpoint( point, x, y );
 
     self.elementcount++;
