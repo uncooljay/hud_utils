@@ -11,5 +11,11 @@ Stick to the archive pool whenever possible. The non-archived pool is not recomm
 
 # Example
 ```c
-self.test = createtext( "Hello World!", "big", 1.0, "top_center", 0, 0, ( 1.0, 1.0, 1.0 ), 0, 1.0 );
+foo()
+{
+    self.test = createtext( "Hello World!", "big", 1.0, "top_center", 0, 0, ( 1.0, 1.0, 1.0 ), 0, 1.0 );
+}
 ```
+
+> [!IMPORTANT]
+> cooljay kissing men!
