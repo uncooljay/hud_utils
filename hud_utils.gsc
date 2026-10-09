@@ -13,8 +13,8 @@ canarchive()
 
 setpoint( point, x, y )
 {
-    self.alignx = "user_left";
-    self.aligny = "user_top";
+    if( !isdefined( point ) )
+        point = "top_left;
 
     switch( point )
     {
@@ -29,11 +29,19 @@ setpoint( point, x, y )
             break;
 
         default:
+            self.alignx = "user_left";
+            self.aligny = "user_top";
             break;
     }
 
     self.horzalign = "user_center";
     self.vertalign = "user_top";
+
+    if( !isdefined( x ) )
+        x = 0;
+
+    if( !isdefined( y ) )
+        y = 0;
 
     self.x = x;
     self.y = y;
@@ -83,6 +91,9 @@ createicon( shader, width, height, point, x, y, color, sort, alpha )
 
 destroyelement( element )
 {
+    if( !isdefined( element ) )
+        return;
+
     element destroy();
     self.elementcount--;
 }
